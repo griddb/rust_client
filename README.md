@@ -17,7 +17,7 @@ Clang: >=7
 GridDB Server/C Client: 5.0 CE
 ```
 
-## QuickStart (CentOS, Ubuntu)
+## QuickStart
 ### Preparations
 
 Install rust.
@@ -53,15 +53,37 @@ $ cargo build
 
 GridDB Server need to be started in advance.
 
-1. The command to run sample
-
+1. If you build GridDB C Client from source code, set LD_LIBRARY_PATH.
 ```console
-    $ cargo run --example sample1 <GridDB notification address> <GridDB notification port>
-         <GridDB cluster name> <GridDB user> <GridDB password>
-    --> Person: name=name01 status=false count=100 lob=[ABCDEFGHIJ]
+  $ export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:<C client library file directory path>
 ```
 
-Person: name=name01 status=false count=100 lob=[ABCDEFGHIJ]
+2. The command to run sample
+
+```console
+  $ cargo run --example sample1 <GridDB notification address> <GridDB notification port>
+       <GridDB cluster name> <GridDB user> <GridDB password>
+  --> Person: name=name01 status=false count=100 lob=[ABCDEFGHIJ]
+```
+
+## Function
+
+(available)
+- STRING, BOOL, BYTE, SHORT, INTEGER, LONG, FLOAT, DOUBLE, TIMESTAMP, BLOB type for GridDB
+- Put single row, get row with key
+- Normal query, aggregation with TQL
+
+(not available)
+- GEOMETRY, Array type for GridDB
+- Multi-Put/Get/Query (batch processing)
+- Timeseries-specific function, affinity
+
+Please refer to the following files for more detailed information.  
+- [Rust Client API Reference](https://griddb.github.io/rust_client/RustAPIReference.htm)
+
+Note:
+1. The current API might be changed in the next version.
+2. When you install C Client with RPM or DEB, you don't need to set LD_LIBRARY_PATH.
 
 ## Community
 
