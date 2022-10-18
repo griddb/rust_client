@@ -47,7 +47,7 @@ Install clang.
 $ cargo build
 ```
 
-2. Use "extern crate rust_client;" in Rust source code.
+2. Use "extern crate griddb_rust;" in Rust source code.
 
 ### How to run sample
 

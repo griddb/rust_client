@@ -1,11 +1,11 @@
-extern crate rust_client;
+extern crate griddb_rust;
 
-use rust_client::get_value;
-use rust_client::griddb::ContainerInfo::*;
-use rust_client::griddb::StoreFactory::*;
-use rust_client::griddb::Type::*;
-use rust_client::griddb::Value::*;
-use rust_client::gsvec;
+use griddb_rust::get_value;
+use griddb_rust::griddb::ContainerInfo::*;
+use griddb_rust::griddb::StoreFactory::*;
+use griddb_rust::griddb::Type::*;
+use griddb_rust::griddb::Value::*;
+use griddb_rust::gsvec;
 use std::env;
 
 fn main() {
