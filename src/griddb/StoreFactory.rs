@@ -23,7 +23,7 @@ use std::ffi::CString;
 use std::ptr;
 use std::vec::Vec;
 
-const RUST_CLIENT_VERSION: &str = "GridDB Rust Client Version 0.5";
+const RUST_CLIENT_VERSION: &str = "GridDB Rust Client Version 0.6";
 pub type GSGridStore = ffi::GSGridStoreTag;
 pub struct StoreFactory {
     _ptr: *mut ffi::GSGridStoreFactory,
